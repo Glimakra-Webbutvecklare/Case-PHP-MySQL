@@ -1,4 +1,4 @@
-FROM php:8-apache
+FROM php:8.4-apache
 RUN a2enmod ssl && a2enmod rewrite
 RUN service apache2 restart
 RUN apt-get update && apt-get install -y \
