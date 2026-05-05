@@ -169,15 +169,22 @@ Docker Desktop ska vara installerat och startat: https://www.docker.com/
 
 1. Klona ner repot
 2. Skapa en `.env`-fil i rotmappen (se avsnittet Miljövariabler nedan)
-3. Öppna terminalen i mappen `laravel/` och kör:
+3. Se till att PHP och composer är installerat
+   Windows:
+   ```
+   winget download php8.4 --skip-dependencies -d .
+   winget install PHP.PHP.8.4
+   # Installera composer, ladda ner och kör https://getcomposer.org/Composer-Setup.exe
+   ```
+5. Öppna terminalen i mappen `laravel/` och kör:
    ```bash
    docker-compose up -d
    ```
-4. Skapa ett nytt Laravel-projekt i `app/`-mappen:
+6. Skapa ett nytt Laravel-projekt i `app/`-mappen:
    ```bash
-   docker-compose exec php composer create-project laravel/laravel .
+   composer create-project laravel/laravel .
    ```
-5. Konfigurera Laravels `.env` (inuti `app/`):
+7. Konfigurera Laravels `.env` (inuti `app/`):
    ```
    DB_CONNECTION=mysql
    DB_HOST=mysql
@@ -186,7 +193,7 @@ Docker Desktop ska vara installerat och startat: https://www.docker.com/
    DB_USERNAME=db_user
    DB_PASSWORD=db_password
    ```
-6. Öppna http://localhost:8060 — du ska nu se Laravels välkomstsida
+8. Öppna http://localhost:8060 — du ska nu se Laravels välkomstsida
 
 ### MySQL via phpMyAdmin (spår B)
 
