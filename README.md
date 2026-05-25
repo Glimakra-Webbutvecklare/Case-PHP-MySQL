@@ -32,7 +32,7 @@ Docker Desktop ska vara installerat och startat: https://www.docker.com/
 
 | Område | Krav |
 |---|---|
-| Ramverk | Laravel 11 |
+| Ramverk | Laravel 11+ |
 | CSS-ramverk | SCSS |
 | Databas | MySQL/MariaDB med Eloquent ORM |
 | Webbserver | Apache (ingår i Docker-imagen) |
